@@ -23,7 +23,7 @@ object Dep {
 
     object Kotlin {
         private const val kotlinVersion = "1.4.21"
-        private const val coroutinesVersion = "1.4.2"
+        const val coroutinesVersion = "1.4.2"
 
         const val sdnlib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
@@ -31,11 +31,21 @@ object Dep {
     }
 
     object AndroidX {
-        private const val appCompatVersion = "1.2.0"
+
+        object Components{
+            private const val appCompatVersion = "1.2.0"
+            const val fragmentVersion = "1.3.0"
+            private const val activityVersion = "1.2.0"
+
+            const val appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
+            const val fragment = "androidx.fragment:fragment-ktx:$fragmentVersion"
+            const val activity = "androidx.activity:activity-ktx:$activityVersion"
+        }
+
         private const val materialDesignVersion = "1.3.0"
         private const val contraintLayoutVersion = "2.0.4"
 
-        const val appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
+
         const val materialDesign = "com.google.android.material:material:$materialDesignVersion"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:$contraintLayoutVersion"
     }
@@ -53,7 +63,7 @@ object Dep {
         }
 
         object Navigation{
-            private const val version = "2.3.3"
+            const val version = "2.3.3"
 
             const val navigation = "androidx.navigation:navigation-fragment-ktx:$version"
             const val navigationUi = "androidx.navigation:navigation-ui-ktx:$version"
@@ -68,7 +78,7 @@ object Dep {
         }
 
         object Paging{
-            private const val paginationVersion = "3.0.0-beta01"
+            const val paginationVersion = "3.0.0-beta01"
 
             const val paging = "androidx.paging:paging-runtime:$paginationVersion"
         }
@@ -78,7 +88,7 @@ object Dep {
          *       'kotlin-kapt'
          */
         object Room{
-            private const val version = "2.2.6"
+            const val version = "2.2.6"
 
             const val room = "androidx.room:room-runtime:$version"
             const val coroutines = "androidx.room:room-ktx:$version"
@@ -86,7 +96,7 @@ object Dep {
         }
 
         object WorkManager{
-            private  const val managerVersion = "2.5.0"
+            const val managerVersion = "2.5.0"
 
             const val manager = "androidx.work:work-runtime-ktx:$managerVersion"
         }

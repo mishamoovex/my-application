@@ -49,7 +49,8 @@ dependencies {
     implementation(Dep.Kotlin.coroutines)
 
     //AppCompat
-    implementation (Dep.AndroidX.appCompat)
+    implementation (Dep.AndroidX.Components.appCompat)
+    implementation (Dep.AndroidX.Components.fragment)
 
     //Android Ui
     implementation (Dep.AndroidX.materialDesign)
@@ -78,5 +79,29 @@ dependencies {
     implementation(Dep.Network.Retrofit.retrofit)
     implementation(Dep.Network.Retrofit.jsonConverter)
 
+    //Espresso idling resources
+    implementation(DepTest.Espresso.idlingResources)
 
+    //---------------- Local test dependencies -------------------------------
+
+    testImplementation(DepTest.Kotlin.coroutine)
+    testImplementation(DepTest.AndroidX.core)
+    testImplementation(DepTest.AndroidX.junit)
+    testImplementation(DepTest.Junit.junit)
+    testImplementation(DepTest.Mock.mockK)
+    testImplementation(DepTest.Assertions.truth)
+    testImplementation(DepTest.Jetpack.lifecycle)
+
+    //---------------- Instrumentation test dependencies ---------------------
+
+    androidTestImplementation(DepTest.AndroidX.core)
+    androidTestImplementation(DepTest.AndroidX.junit)
+    androidTestImplementation(DepTest.Junit.junit)
+    androidTestImplementation(DepTest.Mock.mockK)
+    androidTestImplementation(DepTest.Assertions.truth)
+    androidTestImplementation(DepTest.Espresso.core)
+    androidTestImplementation(DepTest.Jetpack.lifecycle)
+    androidTestImplementation(DepTest.Jetpack.room)
+    androidTestImplementation(DepTest.Jetpack.navigation)
+    debugImplementation(DepTest.Jetpack.fragment)
 }
