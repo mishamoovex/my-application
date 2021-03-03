@@ -23,7 +23,7 @@ object Dep {
 
     object Kotlin {
         private const val kotlinVersion = "1.4.21"
-        const val coroutinesVersion = "1.4.2"
+        const val coroutinesVersion = "1.4.3"
 
         const val sdnlib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"

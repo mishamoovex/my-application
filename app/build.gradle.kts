@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id("kotlin-parcelize")
     id ("androidx.navigation.safeargs.kotlin")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -17,7 +18,7 @@ android {
         targetSdkVersion(Dep.AppConfig.targetSdkVersion)
         versionCode(Dep.AppConfig.versionCode)
         versionName(Dep.AppConfig.versionName)
-        testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
+        testInstrumentationRunner(DepTest.testRunner)
     }
 
     buildTypes {
@@ -106,6 +107,8 @@ dependencies {
     testImplementation(DepTest.Mock.mockK)
     testImplementation(DepTest.Assertions.truth)
     testImplementation(DepTest.Jetpack.lifecycle)
+    testImplementation(DepTest.Jetpack.Hilt.hilt)
+    kaptTest(DepTest.Jetpack.Hilt.kapt)
 
     //---------------- Instrumentation test dependencies ---------------------
 
@@ -118,5 +121,8 @@ dependencies {
     androidTestImplementation(DepTest.Jetpack.lifecycle)
     androidTestImplementation(DepTest.Jetpack.room)
     androidTestImplementation(DepTest.Jetpack.navigation)
+    androidTestImplementation(DepTest.Jetpack.Hilt.hilt)
+    kaptAndroidTest(DepTest.Jetpack.Hilt.kapt)
     debugImplementation(DepTest.Jetpack.fragment)
+
 }

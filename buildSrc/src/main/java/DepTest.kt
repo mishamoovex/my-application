@@ -1,5 +1,7 @@
 object DepTest {
 
+    const val testRunner = "com.mishamoovex.tesring.myapplication.CustomTestRunner"
+
     object AndroidX{
         private const val coreVersion = "1.3.0"
         private const val junitVersion = "1.1.2"
@@ -15,11 +17,18 @@ object DepTest {
     object Jetpack {
         //use debugImplementation
         const val fragment = "androidx.fragment:fragment-testing:${Dep.AndroidX.Components.fragmentVersion}"
-        const val lifecycle = "androidx.arch.core:core-testing:$2.1.0"
+        const val lifecycle = "androidx.arch.core:core-testing:2.1.0"
         const val navigation = "androidx.navigation:navigation-testing:${Dep.Jetpack.Navigation.version}"
         const val paging = "androidx.paging:paging-common:${Dep.Jetpack.Paging.paginationVersion}"
         const val room = "androidx.room:room-testing:${Dep.Jetpack.Room.version}"
         const val workManager = "androidx.work:work-testing:${Dep.Jetpack.WorkManager.managerVersion}"
+
+        object Hilt{
+            private const val version = "2.33-beta"
+
+            const val hilt = "com.google.dagger:hilt-android-testing:$version"
+            const val kapt = "com.google.dagger:hilt-android-compiler:$version"
+        }
     }
 
     object Assertions {
