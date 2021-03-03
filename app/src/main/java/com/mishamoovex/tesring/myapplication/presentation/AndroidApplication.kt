@@ -1,4 +1,4 @@
-package com.mishamoovex.tesring.myapplication.presentation.features
+package com.mishamoovex.tesring.myapplication.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

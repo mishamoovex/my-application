@@ -4,7 +4,7 @@
     package="com.mishamoovex.tesring.myapplication">
 
     <application
-        android:name=".presentation.features.AndroidApplication"
+        android:name=".presentation.AndroidApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:ignore="AllowBackup">
-        <activity android:name=".presentation.MainActivity">
+        <activity android:name=".presentation.features.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
