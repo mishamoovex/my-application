@@ -40,6 +40,21 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    sourceSets {
+        val sharedTestDir = "src\\testShared\\java"
+        getByName("test") {
+            java {
+                srcDir(sharedTestDir)
+            }
+        }
+
+        getByName("androidTest"){
+            java {
+                srcDir(sharedTestDir)
+            }
+        }
+    }
 }
 
 dependencies {
