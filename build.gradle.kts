@@ -6,8 +6,10 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath(Dep.Gradle.android)
-        classpath(Dep.Kotlin.gradle)
+        classpath(Dep.Gradle.gradlePlugin)
+        classpath(Dep.Kotlin.gradlePlugin)
+        classpath(Dep.Jetpack.Navigation.SafeArgs.gradlePlugin)
+        classpath(Dep.Jetpack.Hilt.gradlePlugin)
     }
 }
 
