@@ -107,11 +107,13 @@ object Dep {
          *       'dagger.hilt.android.plugin'
          */
         object Hilt{
-            private  const val version = "2.33-beta"
+            private const val hiltVersion = "2.33-beta"
+            private const val hiltNavigationVersion = "1.0.0-alpha03"
 
-            const val hilt = "com.google.dagger:hilt-android:$version"
-            const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
-            const val kapt = "com.google.dagger:hilt-compiler:$version"
+            const val hilt = "com.google.dagger:hilt-android:$hiltVersion"
+            const val hiltNavigation = "androidx.hilt:hilt-navigation-fragment:$hiltNavigationVersion"
+            const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+            const val kapt = "com.google.dagger:hilt-compiler:$hiltVersion"
         }
 
     }
