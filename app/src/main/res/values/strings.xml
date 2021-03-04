@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="hint_task_title">Title</string>
+    <string name="hint_enter_task">Enter your task here</string>
 </resources>

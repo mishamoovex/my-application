@@ -11,7 +11,7 @@ object DepTest {
     }
 
     object Kotlin{
-        const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test${Dep.Kotlin.coroutinesVersion}"
+        const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Dep.Kotlin.coroutinesVersion}"
     }
 
     object Jetpack {
